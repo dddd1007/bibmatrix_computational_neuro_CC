@@ -1,0 +1,21 @@
+---
+title: "认知控制的文献计量分析"
+output: html_notebook
+---
+
+使用 wos 检索
+
+cognitive control & (computational model | modeling | computational | bayes | bayesian | reinforcement learning)
+
+## 0. 导入数据
+```{r}
+library(bibliometrix)
+library(here)
+
+database <- readFiles(here("data","savedrecs.txt"),
+               here("data","savedrecs_2.txt"))
+bib_set <- convert2df(database, 
+                      dbsource = "isi", format = "plaintext")
+
+```
+
